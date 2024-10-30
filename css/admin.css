@@ -1,0 +1,7 @@
+.card.mail2many form .form-table tbody tr th:first-child {
+	width: 97px;
+}
+
+.card.mail2many form .form-table tbody tr td:last-child input {
+	width: 100%;
+}

@@ -1,0 +1,246 @@
+.mail2many-registration {
+	max-width: var(--wp--style--global--content-size);
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+
+.mail2many-registration form {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+.mail2many-registration form input {
+	margin: 0 0 15px 0;
+}
+
+.mail2many-registration form label[for$="male"],
+.mail2many-registration form label[for="diverse"],
+.mail2many-registration form label[for="newsletter"],
+.mail2many-registration form label[for="newsletter-privacy"] {
+	margin-left: 10px;
+	background: #ffffff;
+	transition: background 0.25s;
+}
+
+.mail2many-registration form .error label[for$="male"],
+.mail2many-registration form .error label[for="diverse"],
+.mail2many-registration form .error label[for="newsletter"],
+.mail2many-registration form .error label[for="newsletter-privacy"] {
+	background: #ff0000;
+	color: #fff;
+}
+
+.mail2many-registration form .newsletter-privacy-link {
+	text-decoration: underline;
+}
+
+.mail2many-registration form input[type=radio][id="female"],
+.mail2many-registration form input[type=radio][id="diverse"] {
+	margin-left: 20px;
+}
+
+.mail2many-registration form input[type=text],
+.mail2many-registration form input[type=tel],
+.mail2many-registration form input[type=email] {
+	font-size: 14px;
+	line-height: 19px;
+	border: none;
+	background: #EAEAEA;
+	padding: 8px;
+	margin: 0 0 16px 0;
+	width: 100%;
+
+	-webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  border-radius: 0;
+  color: #333;
+  outline: none;
+  transition: background 0.25s;
+}
+
+.mail2many-registration form input[type=text]::placeholder,
+.mail2many-registration form input[type=tel]::placeholder,
+.mail2many-registration form input[type=email]::placeholder {
+	color: #333;
+}
+.mail2many-registration form .error input[type=text],
+.mail2many-registration form .error input[type=tel],
+.mail2many-registration form .error input[type=email] {
+	background: #ff0000;
+	color: #fff;
+}
+.mail2many-registration form .error input[type=text]::placeholder,
+.mail2many-registration form .error input[type=tel]::placeholder,
+.mail2many-registration form .error input[type=email]::placeholder {
+	color: #ff9a9a;
+}
+
+.mail2many-registration form .row {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-row-gap: 0px;
+	grid-column-gap: 0px;
+}
+
+.mail2many-registration form .row.gender {
+	grid-template-columns: 1fr;
+}
+
+.mail2many-registration form .mandatory {
+	margin: 16px 0 18px 0;
+	font-size: 12px;
+	line-height: 17px;
+	letter-spacing: 0px;
+	color: #333333;
+	text-align: right;
+}
+
+.mail2many-registration form .gender {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 8px;
+}
+
+.mail2many-registration form .gender .cb {
+	margin-right: 30px;
+}
+
+
+.mail2many-registration form .privacy .cb,
+.mail2many-registration form .gender .cb {
+  display: block;
+  position: relative;
+  padding-left: 37px;
+  padding-top: 3px;
+  cursor: pointer;
+  color: #333;
+  font-size: 14px;
+  transition: color 0.25s;
+}
+
+.mail2many-registration form .privacy.error .cb {
+	color: #ff0000;
+}
+
+.mail2many-registration form .privacy .cb a,
+.mail2many-registration form .gender .cb a {
+	color: #333;
+	text-decoration: none;
+}
+
+.mail2many-registration form .cb input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.mail2many-registration form .cb_indicator {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 28px;
+    width: 28px;
+    background: #eaeaea;
+    border: none;
+    border-radius: 50%;
+}
+.mail2many-registration form .cb:hover input ~ .cb_indicator,
+.mail2many-registration form .cb input:focus ~ .cb_indicator {
+    background: #eaeaea;
+}
+
+.mail2many-registration form .cb input:checked ~ .cb_indicator {
+    background: #eaeaea;
+}
+.mail2many-registration form .cb:hover input:not([disabled]):checked ~ .cb_indicator,
+.mail2many-registration form .cb input:checked:focus ~ .cb_indicator {
+    background: #eaeaea;
+}
+.mail2many-registration form .cb input:disabled ~ .cb_indicator {
+    background: #eaeaea;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.mail2many-registration form .cb_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+.mail2many-registration form .cb input:checked ~ .cb_indicator:after {
+    display: block;
+}
+.mail2many-registration form .cb-checkbox .cb_indicator:after {
+    left: 10px;
+    top: 5px;
+    width: 5px;
+    height: 11px;
+    border: solid #333;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+.mail2many-registration form .cb-checkbox input:disabled ~ .cb_indicator:after {
+    background: #eaeaea;
+}
+.mail2many-registration form .cb-checkbox .cb_indicator::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-left: -1.3rem;
+    margin-top: -1.3rem;
+    background: #eaeaea;
+    border-radius: 3rem;
+    opacity: 0.6;
+    z-index: 99999;
+    transform: scale(0);
+}
+
+.mail2many-registration .message {
+	display: none;
+	font-size: 14px;
+	padding: 20px;
+	color: #fff;
+	background: #94c055;
+	border: 1px solid #6e7d59;
+	margin: 20px 0 0 0;
+}
+
+.mail2many-registration .message.show {
+	display: block;
+}
+
+.mail2many-registration .message.error {
+	background: #ff6e6e;
+	border: 1px solid #ff0000;
+}
+
+.mail2many-registration form .submit-button {
+	margin-top: 30px;
+}
+
+.mail2many-registration form .submit-button .button {
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	font-weight: 700;
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 17px;
+	padding: 12px 40px;
+	letter-spacing: 1.6px;
+	border: 1px solid #cccccc;
+	color: #333;
+	background: #fff;
+	transition: background 0.25s, color: 0.25s;
+}
+
+.mail2many-registration form .submit-button .button:hover {
+	background: #eaeaea;
+	color: #333;
+}
